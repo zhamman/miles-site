@@ -1,0 +1,252 @@
+@import "../App.scss";
+.hamburger-menu {
+  display: none;
+  z-index: 9;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  font-family: "Maragsa";
+
+  // overflow: hidden;
+  .menu-secondary-background-color {
+    background-color: #1e1e1e;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    // overflow: hidden;
+  }
+
+  .menu-layer {
+    position: relative;
+    background: #c3c1c1;
+    height: 100vh;
+    overflow: hidden;
+    &:before {
+      animation: grain 8s steps(10) infinite;
+      background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png");
+      content: "";
+      height: 300%;
+      left: -50%;
+      opacity: 0.3;
+      position: fixed;
+      top: -100%;
+      width: 300%;
+      z-index: -1;
+    }
+    .hamburger-container {
+      max-width: 80%;
+      margin: auto;
+      .wrapper {
+        position: relative;
+        .menu-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          top: 50%;
+          transform: translateY(40%);
+          nav {
+            display: block;
+            ul {
+              padding: 2rem;
+              margin: 0;
+              li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                font-size: 6rem;
+                font-weight: 700;
+                cursor: pointer;
+                height: 8rem;
+                overflow: hidden;
+                position: relative;
+                width: 700px;
+                a {
+                  position: absolute;
+                  color: #1e1e1e;
+                  text-decoration: none;
+                  &:hover {
+                    color: #929292;
+                  }
+                }
+              }
+            }
+          }
+          .info {
+            color: #1e1e1e;
+            width: 400px;
+            // margin-right: 10%;
+            h3 {
+              font-size: 1.5rem;
+              margin: 8px auto;
+            }
+            p {
+              margin: 0 auto;
+              font-size: 1rem;
+            }
+          }
+        }
+        .socials {
+          position: absolute;
+          bottom: -80px;
+          color: #1e1e1e;
+          margin-top: 16px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          span {
+            // &:first-child {
+            //   margin-left: 5px;
+            //   &:hover {
+            //     background-color: #00acee;
+            //   }
+            // }
+            &:nth-child(1) {
+              &:hover {
+                background-color: #3b5998;
+              }
+            }
+            &:nth-child(2) {
+              &:hover {
+                background-color: #833ab4;
+              }
+            }
+            &:nth-child(3) {
+              &:hover {
+                background-color: #0e76a8;
+              }
+            }
+            cursor: pointer;
+            margin: 0 32px;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+              padding: 8px 24px;
+              border-radius: 4px;
+              a {
+                color: white;
+              }
+            }
+            a {
+              color: #1e1e1e;
+              text-decoration: none;
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hamburger-menu {
+    .menu-layer {
+      .hamburger-container {
+        max-width: 80%;
+        margin: auto;
+        .wrapper {
+          .menu-links {
+            nav {
+              ul {
+                li {
+                  font-size: 5rem;
+                  font-weight: 700;
+                  height: 120px;
+                  width: 500px;
+
+                  a {
+                    position: absolute;
+                    color: #1e1e1e;
+
+                    &:hover {
+                      color: rgb(131, 131, 131);
+                    }
+                  }
+                }
+              }
+            }
+            .info {
+              color: #1e1e1e;
+              h3 {
+                font-size: 1rem;
+                margin: 8px auto;
+              }
+              p {
+                margin: 0 auto;
+                font-size: 0.6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    .menu-layer {
+      .wrapper {
+        .menu-links {
+          .info {
+            display: none;
+          }
+        }
+        .socials {
+          span {
+            margin: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hamburger-menu {
+    .menu-layer {
+      .wrapper {
+        .socials {
+          span {
+            margin: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hamburger-menu {
+    .menu-layer {
+      .wrapper {
+        .menu-links {
+          nav {
+            ul {
+              li {
+                font-size: 4rem;
+                font-weight: 700;
+                height: 100px;
+                width: 500px;
+              }
+            }
+          }
+        }
+        .socials {
+          span {
+            margin: 10px;
+          }
+        }
+      }
+    }
+  }
+}
