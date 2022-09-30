@@ -11,7 +11,7 @@ const ScrollForMore = () => {
       className="scroll-for-more"
     >
       <div className="icon">
-        <svg
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           width="23.539"
           height="29.985"
@@ -30,7 +30,7 @@ const ScrollForMore = () => {
               />
             </g>
           </g>
-        </svg>
+        </svg> */}
       </div>
       <div className="text">
         Scroll <br />

@@ -20,10 +20,13 @@
     display: none;
     position: absolute;
     right: 0;
-
+    cursor: pointer;
     &:hover {
       color: $white;
       background: $black;
+    }
+    div {
+      cursor: pointer;
     }
 
     @media screen and (max-width: 680px) {

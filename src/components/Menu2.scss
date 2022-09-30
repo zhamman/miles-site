@@ -56,6 +56,7 @@
           transform: translateY(40%);
           nav {
             display: block;
+            margin-top: 5rem;
             ul {
               padding: 2rem;
               margin: 0;
@@ -71,12 +72,20 @@
                 overflow: hidden;
                 position: relative;
                 width: 700px;
+
                 a {
                   position: absolute;
                   color: #1e1e1e;
                   text-decoration: none;
+                  cursor: pointer;
                   &:hover {
                     color: #929292;
+                  }
+                  @media screen and (max-width: 500px) {
+                    font-size: 4rem;
+                  }
+                  @media screen and (max-width: 400px) {
+                    font-size: 3.2rem;
                   }
                 }
               }
@@ -98,44 +107,25 @@
         }
         .socials {
           position: absolute;
-          bottom: -80px;
+          bottom: -40px;
           color: #1e1e1e;
           margin-top: 16px;
           font-size: 0.8rem;
           font-weight: 600;
           span {
-            // &:first-child {
-            //   margin-left: 5px;
-            //   &:hover {
-            //     background-color: #00acee;
-            //   }
-            // }
-            &:nth-child(1) {
-              &:hover {
-                background-color: #3b5998;
-              }
-            }
-            &:nth-child(2) {
-              &:hover {
-                background-color: #833ab4;
-              }
-            }
-            &:nth-child(3) {
-              &:hover {
-                background-color: #0e76a8;
-              }
-            }
             cursor: pointer;
             margin: 0 32px;
             transition: 0.3s ease-in-out;
-
-            &:hover {
-              padding: 8px 24px;
-              border-radius: 4px;
-              a {
-                color: white;
-              }
+            @media screen and (max-width: 400px) {
+              margin: 0 16px;
             }
+            // &:hover {
+            //   padding: 8px 24px;
+            //   border-radius: 4px;
+            //   a {
+            //     color: white;
+            //   }
+            // }
             a {
               color: #1e1e1e;
               text-decoration: none;
@@ -161,7 +151,7 @@
                 li {
                   font-size: 5rem;
                   font-weight: 700;
-                  height: 120px;
+                  height: 80px;
                   width: 500px;
 
                   a {

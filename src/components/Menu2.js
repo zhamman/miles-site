@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import "./Menu.scss";
+import "./Menu2.scss";
 import { Link } from "react-router-dom";
 
 const Menu = ({ state }) => {
@@ -48,7 +48,7 @@ const Menu = ({ state }) => {
       });
       staggerReaveal(revealMenuBackground, revealMenu);
       //   fadeInUp(info);
-      staggerText(line1, line2, line3);
+      staggerText(line3, line2);
       staggerSocials(social1, social2, social3, social4);
     }
   }, [state]);
@@ -106,24 +106,6 @@ const Menu = ({ state }) => {
     });
   };
 
-  const handleHover = e => {
-    gsap.to(e.target, {
-      duration: 0.3,
-      y: 3,
-      skewX: 4,
-      ease: "power3.inOut",
-    });
-  };
-
-  const handleHoverExit = e => {
-    gsap.to(e.target, {
-      duration: 0.3,
-      y: -3,
-      skewX: 0,
-      ease: "power3.inOut",
-    });
-  };
-
   return (
     <div ref={el => (menu = el)} className="hamburger-menu">
       <div
@@ -138,8 +120,6 @@ const Menu = ({ state }) => {
                 <ul>
                   <li>
                     <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line1 = el)}
                       to="/about/miles-mazel"
 
@@ -149,20 +129,13 @@ const Menu = ({ state }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line2 = el)}
-                      to="/gallery"
-                    >
+                    <Link ref={el => (line2 = el)} to="/gallery">
                       Gallery
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/contact"
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
                       href="#contact"
                     >

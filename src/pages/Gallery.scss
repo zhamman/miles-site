@@ -10,6 +10,9 @@
     align-items: center;
     text-transform: uppercase;
     font-size: 1.4rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
   .gallery {
     width: 100%;

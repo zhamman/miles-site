@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { withRouter, Link } from "react-router-dom";
-import "./header.scss";
+import "./header2.scss";
 
-import Menu from "./Menu";
+import Menu2 from "./Menu2";
 
 const Header = ({ history }) => {
   const [state, setState] = useState({
@@ -52,6 +52,14 @@ const Header = ({ history }) => {
     }, 1200);
   };
 
+  const scrollToPosition = () => {
+    window.scroll({
+      bottom: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header>
       <div className="container">
@@ -71,16 +79,16 @@ const Header = ({ history }) => {
             <Link to="/gallery" className="link">
               <div className="mask">
                 <div className="link-container">
-                  <span class="link-title1 title">2.Work</span>
-                  <span class="link-title2 title">2.Work</span>
+                  <span class="link-title1 title">1.Work</span>
+                  <span class="link-title2 title">1.Work</span>
                 </div>
               </div>
             </Link>
             <Link to="/contact" className="link">
               <div className="mask">
                 <div className="link-container">
-                  <span class="link-title1 title">3.Contact</span>
-                  <span class="link-title2 title">3.Contact</span>
+                  <span class="link-title1 title">2.Contact</span>
+                  <span class="link-title2 title">2.Contact</span>
                 </div>
               </div>
             </Link>
@@ -96,7 +104,7 @@ const Header = ({ history }) => {
           </div>
         </div>
       </div>
-      <Menu state={state} />
+      <Menu2 state={state} />
     </header>
   );
 };

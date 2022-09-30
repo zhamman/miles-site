@@ -14,7 +14,9 @@ const Contact = () => {
         <div className="txt-container">
           <p className="p1">want to collaborate? </p>
           <p className="p2">AVAILABLE FOR FREELANCE WORK</p>
-          <p className="p3">milesmazel@gmail.com</p>
+          <a href="mailto: milesmazel@gmail.com" className="p3">
+            milesmazel@gmail.com
+          </a>
         </div>
       </div>
       <div className="socials">

@@ -14,16 +14,16 @@ code {
     monospace;
 }
 
-html,
+/* html,
 body,
 * {
   cursor: none;
-}
+} */
 
 @media screen and (max-width: 768px) {
   html,
   body,
   * {
-    cursor: auto;
+    /* cursor: auto; */
   }
 }

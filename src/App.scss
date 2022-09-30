@@ -40,27 +40,27 @@ body {
   10% {
     transform: translate(-5%, -10%);
   }
-  20% {
-    transform: translate(-15%, 5%);
-  }
+  // 20% {
+  //   transform: translate(-15%, 5%);
+  // }
   30% {
     transform: translate(7%, -25%);
   }
-  40% {
-    transform: translate(-5%, 25%);
-  }
+  // 40% {
+  //   transform: translate(-5%, 25%);
+  // }
   50% {
     transform: translate(-15%, 10%);
   }
-  60% {
-    transform: translate(15%, 0%);
-  }
+  // 60% {
+  //   transform: translate(15%, 0%);
+  // }
   70% {
     transform: translate(0%, 15%);
   }
-  80% {
-    transform: translate(3%, 35%);
-  }
+  // 80% {
+  //   transform: translate(3%, 35%);
+  // }
   90% {
     transform: translate(-10%, 10%);
   }
@@ -316,7 +316,7 @@ main {
     height: 700px;
   }
   @media screen and (max-width: 410px) {
-    height: 850px;
+    height: 750px;
   }
   .container {
     .row {
@@ -336,9 +336,8 @@ main {
       }
       p {
         // font-family: "Maragsa";
-        // font-family: "Darker Grotesque";
-
-        font-size: 2.5rem;
+        font-family: "Darker Grotesque";
+        font-size: 2rem;
         letter-spacing: 1px;
         line-height: 60px;
         font-weight: 400;
