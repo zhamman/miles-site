@@ -149,15 +149,16 @@
             nav {
               ul {
                 li {
-                  font-size: 5rem;
+                  font-size: 4rem;
                   font-weight: 700;
-                  height: 80px;
+                  height: 100px;
                   width: 500px;
+                  // line-height: 4;
 
                   a {
                     position: absolute;
                     color: #1e1e1e;
-
+                    // height: 2rem;
                     &:hover {
                       color: rgb(131, 131, 131);
                     }

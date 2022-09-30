@@ -17,7 +17,7 @@ const Gallery = () => {
             {leftChunk.map((img, index) => {
               return (
                 <motion.img
-                  whileHover={{ scale: 1.03 }}
+                  whileHover={{ scale: 1.05 }}
                   key={index}
                   src={img.src}
                   alt={img.img}
@@ -29,7 +29,7 @@ const Gallery = () => {
             {rightChunk.map((img, index) => {
               return (
                 <motion.img
-                  whileHover={{ scale: 1.03 }}
+                  whileHover={{ scale: 1.05 }}
                   key={index}
                   src={img.src}
                   alt={img.img}
@@ -44,9 +44,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
-// {
-//   data.map((img, index) => {
-//     return <img key={index} src={img.src} alt={img.img} />;
-//   });
-// }

@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-//Pages
 import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/Contact";
-//components
-// import Header from "./components/header";
-//Styles
 import "./App.scss";
 import Gallery from "./pages/Gallery";
-import CustomCursor from "./components/CustomCursor/CustomCursor";
 import Header2 from "./components/header2";
 import ScrollToTop from "./components/ScrollToTop";
 
