@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-//Components
 import ScrollForMore from "../components/scrollForMore";
-//Ease
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
